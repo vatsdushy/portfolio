@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-name underline">
+        <span style="background: white; color: black;margin-right:5px"
+          >DUSHYANT </span
+        >VATS
+      </div>
+      <nav class="header-nav">
+        <div class="home-nav underline"><a href="index.html">Home</a></div>
+        <div class="about-nav underline"><a href="about.html">About</a></div>
+      </nav>
+    </header>
+
+    <div class="main">
+      <div class="intro">
+        <div class="text">
+          <h1>
+            Hi, My Name Is<br />
+            Dushyant Vats
+          </h1>
+
+          <p>I Am A Mechanical Engineer</p>
+        </div>
+        <div class="img-container">
+          <img class="pic" src="img.jpg" alt="pic" />
+        </div>
+      </div>
+    </div>
+
+    <div class="shutter"></div>
+
+    <script>
+      let el = document.getElementsByClassName("text")[0];
+      window.addEventListener("load", () => {
+        el.style.transform = "translateX(0px)";
+        el.style.opacity = 1;
+      });
+    </script>
+  </body>
+</html>
