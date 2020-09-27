@@ -163,6 +163,9 @@ header {
 .heading-left > h2 {
   text-transform: capitalize;
 }
+li {
+  text-transform: capitalize;
+}
 @media only screen and (max-width: 760px) {
   header {
     display: flex;
@@ -186,5 +189,8 @@ header {
   .intro {
     display: flex;
     flex-direction: column;
+  }
+  .heading-left {
+    display: none;
   }
 }
