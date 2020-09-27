@@ -77,8 +77,8 @@ header {
 }
 
 .pic {
-  /* width: 100%; */
-  height: 70vh;
+  width: 100%;
+  /* height: 70vh; */
   border-radius: 10%;
   transition: 1s;
 }
