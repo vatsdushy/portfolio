@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +28,9 @@
     <div class="wrapper">
       <div class="heading-left underline">
         <h2><a href="#profile" class="underline">profile</a></h2>
-        <h2><a href="#work-experience">Work Experience</a></h2>
+        <h2>
+          <a href="#work-experience" class="underline">Work Experience</a>
+        </h2>
         <h2>
           <a href="#educational" class="underline">education</a>
         </h2>
@@ -46,6 +49,7 @@
       </div>
 
       <div class="description">
+        <div id="button">></div>
         <div class="profile">
           <h2 id="profile">profile</h2>
           <img
@@ -54,19 +58,32 @@
             style="float: left; margin-right: 15px;"
           />
           <p>
-           I am a professional seeking new opportunities to grab while keen on learning new attributes to grow and to be a prevailing asset for the company ,fast and effecient learner with multitasking and personal skills to ensure the streamline flow of work.
+            I am a professional seeking new opportunities to grab while keen on
+            learning new attributes to grow and to be a prevailing asset for the
+            company ,fast and effecient learner with multitasking and personal
+            skills to ensure the streamline flow of work.
           </p>
+          <br />
         </div>
-        <div class="work-experience underline" data-aos="fade-up"><h2 id="work-experience">Work Experience</h2>
+        <div class="work-experience underline" data-aos="fade-up">
+          <h2 id="work-experience">Work Experience</h2>
           <img
             src="https://www.pinclipart.com/picdir/big/354-3547303_font-work-svg-png-icon-free-download-391838.png"
             width="100px"
             style="float: left; margin-right: 15px;"
           />
-        <p><h3>Sterling Tools Ltd.(DLF-Faridabad)</h3>
-        (18-september-20118-current) <br>
-        Working as design executive in design and development engineering,overseeing various project with utmost focus on details. while completing the task with perfection. my responsibility is to design the product according to the client speification and to oversee th eprodduct development on the various stages to avoid any problems. completion of the PPAP doccuments of the parts including APQP,CP,PFD,FMEA,etc.
-        </p>
+
+          <p>
+            <span>Sterlings Tools Ltd. DLF-FBD</span>
+            (18-september-2018-present <br />
+            Working as design executive in design and development
+            engineering,overseeing various project with utmost focus on details.
+            while completing the task with perfection. my responsibility is to
+            design the product according to the client speification and to
+            oversee th eprodduct development on the various stages to avoid any
+            problems. completion of the PPAP doccuments of the parts including
+            APQP,CP,PFD,FMEA,etc.
+          </p>
         </div>
         <div class="educational-qualification" data-aos="fade-up">
           <h2 id="educational">
@@ -157,7 +174,7 @@
           />
           <p>
             <li>Positive attitude</li>
-            <li>Hard-beaten person</li>
+
             <li>Honest and punctual</li>
             <li>Dedication and sincerity</li>
           </p>
@@ -187,13 +204,21 @@
 
     <div class="shutter"></div>
 
-    <script>AOS.init();
-      // $(".description").on("swiperight", swiperightHandler);
-      // function swiperightHandler() {
-      //   $(".heading-left").show();
-
-      //   // alert("maila");
-      // }
+    <script>
+      AOS.init();
+      let sidebar = document.getElementsByClassName("heading-left")[0];
+      let el = document.getElementById("button");
+      el.addEventListener("click", () => {
+        if (sidebar.style.display === "flex") {
+          sidebar.style.display = "none";
+          el.style.marginLeft = 0;
+          el.innerHTML = ">";
+        } else {
+          sidebar.style.display = "flex";
+          el.style.marginLeft = "117px";
+          el.innerHTML = "<";
+        }
+      });
     </script>
   </body>
 </html>
